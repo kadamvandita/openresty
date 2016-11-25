@@ -1936,8 +1936,8 @@ clean:
 platform: linux (linux)
 cp -rp bundle/ build
 cd build
-export LIBPQ_LIB='/usr/lib64'
-export LIBPQ_INC='/usr/include'
+export LIBPQ_LIB='/usr/lib/s390x-linux-gnu'
+export LIBPQ_INC='/usr/postgresql'
 cd lua-5.1.5
 gmake linux
 gmake install INSTALL_TOP=$OPENRESTY_BUILD_DIR/lua-root//usr/local/openresty/lua/
@@ -1965,7 +1965,7 @@ sh ./configure --prefix=/usr/local/openresty/nginx \
   --add-module=../redis-nginx-module-0.3.7 \
   --add-module=../rds-json-nginx-module-0.14 \
   --add-module=../rds-csv-nginx-module-0.07 \
-  --with-ld-opt='-Wl,-rpath,/usr/lib64' \
+  --with-ld-opt='-Wl,-rpath,/usr/lib/s390x-linux-gnu' \
   --with-http_ssl_module
 cd ../..
 Type the following commands to build and install:
